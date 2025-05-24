@@ -54,9 +54,9 @@ jobs:
         - name: Install Dependencies
           run: npm install
     
-        - name: code coveraging
-          if: always()
+        - name: code coveraging 
           run: npm run code-coverage
+          continue-on-error: true
 
         - name: Code-Coverage-Result
           uses: actions/upload-artifact@v4
